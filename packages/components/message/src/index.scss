@@ -1,0 +1,62 @@
+.message {
+  min-width: 200px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
+  background-color: #fff;
+  transition: opacity 0.2s, transform 0.4s, top 0.4s;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  pointer-events: all;
+
+  .icon {
+    margin-right: 10px;
+    font-weight: bold;
+    &.info {
+      color: gray;
+    }
+    &.success {
+      color: rgb(31, 197, 25);
+    }
+    &.warning {
+      color: rgb(235, 165, 14);
+    }
+    &.error {
+      color: rgb(214, 30, 17);
+    }
+  }
+  .closeBtn {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 14px;
+
+    &:focus {
+      outline-width: 0;
+    }
+    &:hover {
+      color: #999;
+    }
+  }
+
+  .content {
+    padding-right: 20px;
+  }
+}
+
+
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

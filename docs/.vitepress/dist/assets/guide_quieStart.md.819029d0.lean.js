@@ -1,0 +1,1 @@
+import{_ as e,c as t,h as a,a as r}from"./app.f0d639ff.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/quieStart.md"}'),s={name:"guide/quieStart.md"},o=r("p",null,"\u5FEB\u901F\u5F00\u59CB",-1),n=[o];function c(i,_,d,p,u,l){return a(),t("div",null,n)}var h=e(s,[["render",c]]);export{f as __pageData,h as default};

@@ -1,0 +1,43 @@
+@import 'config.scss';
+// @forward 'config.scss';
+@import './var.scss' ;
+
+@mixin b($block) {
+  $B: $namespace+'-'+$block;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+// @at-root 使得规则被限制在文档的根层级上，而不会嵌套到父级中
+// #{} 当变量在class中使用的时候，需要加上这个
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin e($element) {
+  @at-root {
+    #{& + $element-separator + $element} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  @at-root {
+    #{& + $modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
+
+@mixin button-variant($color, $background-color, $border-color) {
+  color: $color;
+  background: $background-color;
+  border-color: $border-color;
+}
